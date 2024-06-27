@@ -255,7 +255,7 @@ table {
     border-collapse: separate;
     border-width: 0;
     border-spacing: 0;
-    @apply rounded-lg overflow-hidden border border-ens-light-border dark:border-ens-dark-border;
+    @apply rounded-lg overflow-hidden border border-ens-light-border dark:border-ens-dark-border z-20 relative;
 }
 
 thead {

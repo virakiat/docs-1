@@ -197,10 +197,11 @@ const btcAddress = await resolver?.getAddress(0);
 | Base         | 2147492101 |
 | Arbitrum One | 2147525809 |
 
-<div className="w-full flex items-center justify-center gap-1">
-    ... and many many more following
-    [SLIP-0044](https://github.com/satoshilabs/slips/blob/master/slip-0044.md)
-    and [ENSIP-11](/ensip/11)
+<div className="bg-ens-light-background-primary border-b relative border-x rounded-b-lg -my-8 pt-2 px-4 z-0 mb-4">
+    <div className="flex flex-col md:flex-row justify-between items-center py-1 z-40">
+        <span className="z-50">... and many many more following [SLIP-0044](https://github.com/satoshilabs/slips/blob/master/slip-0044.md) and [ENSIP-11](/ensip/11)</span>
+        <ViewListButton />
+    </div>
 </div>
 
 ### Decoding Address Hashes

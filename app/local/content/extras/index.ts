@@ -1,3 +1,5 @@
+import { ViewListButton } from '@/components/cointypes/ViewListButton';
+
 import { ChainDeployments } from './deployments/deployment';
 import { DNSUsageExamples } from './dns/DNSUsageExamples';
 import { QuickBannerLink } from './home/QuickLink';
@@ -20,4 +22,5 @@ export const extras = {
     Icons,
     LinkCard,
     VideoGallery,
+    ViewListButton,
 };
