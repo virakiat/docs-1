@@ -196,12 +196,16 @@ export const navigation: SectionData[] = [
                     {
                         title: 'Resolution Process',
                         href: '/resolution',
-                        wip: true,
                         icon: '✨',
                     },
                     {
                         title: 'Name Processing',
                         href: '/resolution/names',
+                        icon: '⚙️',
+                    },
+                    {
+                        title: 'Coin Types',
+                        href: '/resolution/coins',
                         icon: '⚙️',
                     },
                 ],

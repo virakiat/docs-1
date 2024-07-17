@@ -1,4 +1,4 @@
-import { ViewListButton } from '@/components/cointypes/ViewListButton';
+import { CoinTypeList } from '@/components/cointypes/CoinTypeList';
 
 import { ChainDeployments } from './deployments/deployment';
 import { DNSUsageExamples } from './dns/DNSUsageExamples';
@@ -22,5 +22,5 @@ export const extras = {
     Icons,
     LinkCard,
     VideoGallery,
-    ViewListButton,
+    CoinTypeList,
 };

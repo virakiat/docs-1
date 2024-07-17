@@ -9,19 +9,20 @@ export const evmChainIdToCoinType = (chainId: bigint): bigint => {
             return BigInt(60);
         // EOA Chain Id
         case BigInt(0):
-            return BigInt(2_147_483_658);
+            return BigInt(convertEVMChainIdToCoinType(0));
+            // return BigInt(2_147_483_658);
         // Optimism Mainnet
         case BigInt(10):
-            return BigInt(2_147_483_658);
+            return BigInt(convertEVMChainIdToCoinType(10));
         // Polygon
         case BigInt(137):
-            return BigInt(2_147_483_785);
+            return BigInt(convertEVMChainIdToCoinType(137));
         // Base
         case BigInt(8453):
-            return BigInt(2_147_492_101);
+            return BigInt(convertEVMChainIdToCoinType(8453));
         // Arbitrum One
         case BigInt(42_161):
-            return BigInt(2_147_525_809);
+            return BigInt(convertEVMChainIdToCoinType(42_161));
         default:
             return BigInt(convertEVMChainIdToCoinType(Number(chainId)));
     }
@@ -48,4 +49,22 @@ export const EVMChainIds = {
     Linea: BigInt(59_144),
     ArbitrumOne: BigInt(42_161),
     Taiko: BigInt(167_000),
+};
+
+export const CoinTypeList = {
+    Bitcoin: {
+        coinType: BigInt(0),
+    },
+    Litecoin: {
+        coinType: BigInt(2),
+    },
+    Dogecoin: {
+        coinType: BigInt(3),
+    },
+    Solana: {
+        coinType: BigInt(501),
+    },
+    Ethereum: {
+        coinType: BigInt(60),
+    },
 };
