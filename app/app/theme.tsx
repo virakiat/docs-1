@@ -4,8 +4,18 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ThemeProvider } from 'next-themes';
 import { useEffect } from 'react';
 import { holesky, mainnet, sepolia } from 'viem/chains';
-import { createConfig, http, WagmiProvider } from 'wagmi';
-import { injected, walletConnect } from 'wagmi/connectors';
+import { createConfig, CreateConnectorFn, http, WagmiProvider } from 'wagmi';
+import { coinbaseWallet, injected, walletConnect } from 'wagmi/connectors';
+
+const coinbaseKeys: CreateConnectorFn = (config) => {
+    return {
+        ...coinbaseWallet({
+            appName: 'ENS Documentation',
+            preference: 'smartWalletOnly',
+        })(config),
+        name: 'Coinbase Keys',
+    };
+};
 
 const config = createConfig({
     chains: [mainnet, sepolia, holesky],
@@ -21,6 +31,7 @@ const config = createConfig({
             },
             showQrModal: false,
         }),
+        coinbaseKeys,
     ],
     transports: {
         [mainnet.id]: http(),
